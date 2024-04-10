@@ -25,5 +25,13 @@ def Download():
     yd.download("Put your file path here of YoutubeDownload Folder")
     print("Finished Downloading")
 ```
+6. Now look at the function "Plist" and find the 3 resolotion choices. Within those 3 if and elif statements go to...
 
-6. Congrats! your youtube downloader is setup (NOTE: Evertime you move the location of the YoutubeDownloads folder you have to redo steps 4-5 to make sure the program can find the YoutubeDownloads folder.)
+```
+video.streams.get_lowest_resolution().download("/Users/User/Documents/PythonPrograms/YoutubeDownloads")
+video.streams.get_by_resolution(resolution="360p").download("/Users/User/Documents/PythonPrograms/YoutubeDownloads")
+video.streams.get_lowest_resolution().download("/Users/User/Documents/PythonPrograms/YoutubeDownloads")
+```
+7. Then put the current file path of the "YoutubeDownloads" folder inside the curly brackets of yd.download(""). There should be my file path to the YoutubeDownloads folder currently in their.
+
+8. Congrats! your youtube downloader is setup (NOTE: Evertime you move the location of the YoutubeDownloads folder you have to redo steps 4-7 to make sure the program can find the YoutubeDownloads folder.)
